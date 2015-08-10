@@ -88,18 +88,18 @@ use the Agg backend as follows:
 Overview
 ----
 
-* All Pandashells executables begin with a "p."  This is designed to work
-  nicely with the bash-completion feature.  If you can't remember the exact
-  name of a command, simply typing p.[tab] will show you a complete list of
-  all Pandashells commands.
+All Pandashells executables begin with a "p."  This is designed to work
+nicely with the bash-completion feature.  If you can't remember the exact
+name of a command, simply typing p.[tab] will show you a complete list of
+all Pandashells commands.
 
-* Every command can be run with a -h option to view help.  Each of these
-  help messages will contain multiple examples of how to properly use the tool.
+Every command can be run with a -h option to view help.  Each of these
+help messages will contain multiple examples of how to properly use the tool.
 
-* Pandashells is equipped with a tool to generate sample csv files.  This tool
-  provides standardized inputs for use in the tool help sections as well as this
-  documentation.
-  <pre><code><strong>[~]$ p.example_data -h</strong></code></pre>
+Pandashells is equipped with a tool to generate sample csv files.  This tool
+provides standardized inputs for use in the tool help sections as well as this
+documentation.
+<pre><code><strong>[~]$ p.example_data -h</strong></code></pre>
   
 Tool Descriptions
 ---
