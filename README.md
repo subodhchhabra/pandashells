@@ -57,13 +57,15 @@ especially for the graphics backends required under the `[full]` installation op
 * bullet one
 <pre><code><strong>[~]$ # Only install Pandashells without installing any dependencies
 [~]$ pip install pandashells
+</strong></code></pre>
 
 * bullet one
-[~]$ # Install Pandashells along with requirements for all non-graphics pandas-based tools
+<pre><code><strong>[~]$ # Install Pandashells along with requirements for all non-graphics pandas-based tools
 [~]$ pip install pandashells[pandas]
+</strong></code></pre>
 
 * bullet one
-[~]$ # Perform a full installation.  May require manual installation of missing system libraries.
+<pre><code><strong>[~]$ # Perform a full installation.  May require manual installation of missing system libraries.
 [~]$ pip install pandashells[full]
 </strong></code></pre>
 
