@@ -101,7 +101,8 @@ Overview
   documentation.
   <pre><code><strong>[~]$ p.example_data -h</strong></code></pre>
   
-* Tool Descriptions
+Tool Descriptions
+---
 
 Tool          |Install Group   |Purpose
 ---           |---             |---
