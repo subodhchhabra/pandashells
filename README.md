@@ -54,7 +54,7 @@ Note that this command will also work if you are using the
 ###Install with pip
 If you prefer to manage your own dependencies, you can pip install Pandashells using one
 of the following commands.  Note that, unlike the conda package manager, pip is not able
-to install system libraries, which can result in significant manual tinkering
+to install system libraries. This can result in significant manual tinkering
 especially for the graphics backends required under the `[full]` installation option.
 
 * Install Pandashells but no requirements
