@@ -69,30 +69,13 @@ especially for the graphics backends required under the `[full]` installation op
 
 Requirements
 ----
-
-Pandashells is both Python2 and Python3 compatible and was developed using the 
-<a href="https://store.continuum.io/cshop/anaconda/">Anaconda Python Distribution</a>.
-We strongly recommend using Anaconda and or Miniconda to run Pandashells because 
-installing the required external and system libraries is completely taken care of.
-
-There are no default requirements with pandashells because some of the tools only require
-the standard library, and there's no sense installing unnecessary packages if you only want
-to use that subset of tools. There are optional requirements specified for the tools that use
-the numpy/scipy/pandas stack `[pandas]` feature set and for those that generate plots
-`[plotting]` feature set.  All of these are also covered by the `[full]` feature set.
-If a particular tool encounters a missing dependency, it will
-gracefully fail with an informative message detailing the steps required for installing
-the missing dependency.
-
-Below is a comprehensive list packages that pandashells imports.
-* gatspy
-* matplotlib
-* mpld3
-* numpy
-* pandas
-* scipy
-* seaborn
-* statsmodels
+Pandashells is both Python2 and Python3 compatible.  There are no default requirements
+because some of the tools only require the standard library, and there's no sense installing
+unnecessary packages if you only want to use that subset of tools.  If a particular tool
+encounters a missing dependency, it will do so with an error message indicating the missing
+dependency.  Below is a list of all imports used across the Pandashells toolkit
+* [pandas]: numpy, scipy, pandas, statsmodels
+* [full]:   numpy, scipy, pandas, statsmodels matplotlib mpld3 seaborn gatspy
 
 
 **Important:**  If you want to use pandashells without interactive visualizations
