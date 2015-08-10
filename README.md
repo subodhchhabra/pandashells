@@ -43,7 +43,7 @@ Installation
 Pandashells is a pure-python package, but depends heavily on other packages which are not.
 By far the fastest and most painless way to get started with Pandashells is to install the
 <a href="http://conda.pydata.org/docs/install/quick.html">Miniconda</a> package manager,
-and then simply run
+and then simply run to obtain a full Pandashells install
 <pre><code><strong>[~]$ conda install -c https://conda.anaconda.org/robdmc pandashells 
 </strong></code></pre>
 Note that this command will also work if you are using the 
@@ -54,7 +54,7 @@ using one of the following commands.  Note that, unlike the conda package manage
 is not able to install system libraries, which can result in significant manual tinkering
 especially for the graphics backends required under the `[full]` installation option.
 
-* Only install Pandashells without installing any dependencies
+* Install Pandashells but no requirements
 <pre><code><strong> [~]$ pip install pandashells </strong></code></pre>
 
 * Install Pandashells along with requirements for all non-graphics pandas-based tools
