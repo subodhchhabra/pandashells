@@ -41,7 +41,7 @@ allow those familiar with the python data stack to be immediately productive.
 Installation
 ----
 
-###With conda package manager (recommended)
+###Install with conda (recommended)
 Pandashells is a pure-python package, but depends heavily on other packages which are not.
 By far the fastest and most painless way to get started with Pandashells is to install the
 <a href="http://conda.pydata.org/docs/install/quick.html">Miniconda</a> package manager,
@@ -51,7 +51,7 @@ and then simply run to obtain a full Pandashells install
 Note that this command will also work if you are using the 
 <a href="https://store.continuum.io/cshop/anaconda/">Anaconda Python Distribution</a>.
 
-###With pip
+###Install with pip
 If you prefer to manage your own dependencies, you can install Pandashells with pip 
 using one of the following commands.  Note that, unlike the conda package manager, pip
 is not able to install system libraries, which can result in significant manual tinkering
