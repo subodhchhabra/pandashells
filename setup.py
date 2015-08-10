@@ -39,12 +39,10 @@ setup(
     # If you add/remove a requirement, please also update full
     extras_require = {
         'pandas': ['numpy', 'pandas', 'scipy', 'statsmodels'],
-        'graphics': ['matplotlib', 'mpld3', 'seaborn'],
-        'lomb_scargle': ['astroML', 'supersmoother', 'gatspy'],
         'full': [
             'numpy', 'pandas', 'scipy', 'statsmodels',
-            'matplotlib', 'mpld3', 'seaborn',
             'astroML', 'supersmoother', 'gatspy',
+            'matplotlib', 'mpld3', 'seaborn',
         ],
     },
     entry_points={
@@ -62,13 +60,13 @@ setup(
             'p.regress = pandashells.bin.p_regress:main [pandas]',
             'p.sig_edit = pandashells.bin.p_sig_edit:main [pandas]',
 
-            'p.cdf = pandashells.bin.p_cdf:main [graphics]',
-            'p.facet_grid = pandashells.bin.p_facet_grid:main [graphics]',
-            'p.hist = pandashells.bin.p_hist:main [graphics]',
-            'p.plot = pandashells.bin.p_plot:main [graphics]',
-            'p.regplot = pandashells.bin.p_regplot:main [graphics]',
+            'p.cdf = pandashells.bin.p_cdf:main [full]',
+            'p.facet_grid = pandashells.bin.p_facet_grid:main [full]',
+            'p.hist = pandashells.bin.p_hist:main [full]',
+            'p.plot = pandashells.bin.p_plot:main [full]',
+            'p.regplot = pandashells.bin.p_regplot:main [full]',
 
-            'p.lomb_scargle = pandashells.bin.p_lomb_scargle:main [lomb_scargle]',
+            'p.lomb_scargle = pandashells.bin.p_lomb_scargle:main [full]',
         ],
     }
 )
