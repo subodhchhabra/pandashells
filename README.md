@@ -54,12 +54,15 @@ using one of the following commands.  Note that, unlike the conda package manage
 is not able to install system libraries, which can result in significant manual tinkering
 especially for the graphics backends required under the `[full]` installation option.
 
+* bullet one
 <pre><code><strong>[~]$ # Only install Pandashells without installing any dependencies
 [~]$ pip install pandashells
 
+* bullet one
 [~]$ # Install Pandashells along with requirements for all non-graphics pandas-based tools
 [~]$ pip install pandashells[pandas]
 
+* bullet one
 [~]$ # Perform a full installation.  May require manual installation of missing system libraries.
 [~]$ pip install pandashells[full]
 </strong></code></pre>
