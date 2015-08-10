@@ -46,16 +46,24 @@ By far the fastest and most painless way to get started with Pandashells is to i
 and then simply run
 <pre><code><strong>[~]$ conda install -c https://conda.anaconda.org/robdmc pandashells 
 </strong></code></pre>
-Note that this command will also work if you are using the much heavier
+Note that this command will also work if you are using the 
 <a href="https://store.continuum.io/cshop/anaconda/">Anaconda Python Distribution</a>.
 
 If you prefer to manage your own dependencies, you can install Pandashells with pip 
-using the command
-<pre><code><strong>[~]$ pip install pandashells  # does NOT automatically install dependencies (see below)
+using one of the following commands.  Note that, unlike the conda package manager, pip
+is not able to install system libraries, which can result in significant manual tinkering
+especially for the graphics backends required under the `[full]` installation option.
+
+<pre><code><strong>[~]$ # Only install Pandashells without installing any dependencies
+pip install pandashells
+
+# Install Pandashells along with requirements for all non-graphics pandas-based tools
+pip install pandashells[pandas]
+
+# Perform a full installation.  May require manual installation of missing system libraries.
+pip install pandashells[full]
 </strong></code></pre>
-or for the development version (could be unstable)
-<pre><code><strong>[~]$ pip install --upgrade  git+https://github.com/robdmc/pandashells.git
-</strong></code></pre>
+
 
 Requirements
 ----
