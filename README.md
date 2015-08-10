@@ -103,7 +103,7 @@ Overview
   
 * Tool Descriptions
 
-Tool          |Dependency Group|Purpose
+Tool          |Install Group   |Purpose
 ---           |---             |---
 p.config      |standard library|Set default Pandashells configuration options
 p.crypt       |standard library|Encrypt/decrypt files using open-ssl
