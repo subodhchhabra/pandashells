@@ -55,13 +55,13 @@ is not able to install system libraries, which can result in significant manual 
 especially for the graphics backends required under the `[full]` installation option.
 
 <pre><code><strong>[~]$ # Only install Pandashells without installing any dependencies
-pip install pandashells
+[~]$ pip install pandashells
 
-# Install Pandashells along with requirements for all non-graphics pandas-based tools
-pip install pandashells[pandas]
+[~]$ # Install Pandashells along with requirements for all non-graphics pandas-based tools
+[~]$ pip install pandashells[pandas]
 
-# Perform a full installation.  May require manual installation of missing system libraries.
-pip install pandashells[full]
+[~]$ # Perform a full installation.  May require manual installation of missing system libraries.
+[~]$ pip install pandashells[full]
 </strong></code></pre>
 
 
