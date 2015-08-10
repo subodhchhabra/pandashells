@@ -74,8 +74,8 @@ because some of the tools only require the standard library, and there's no sens
 unnecessary packages if you only want to use that subset of tools.  If a particular tool
 encounters a missing dependency, it will fail with an error message indicating the missing
 dependency.  Below is a list of all imports used across the Pandashells toolkit
-* `[pandas]:` numpy, scipy, pandas, statsmodels
-* `[full]:`   numpy, scipy, pandas, statsmodels matplotlib mpld3 seaborn gatspy
+* `[pandas]` numpy, scipy, pandas, statsmodels
+* `[full]`   numpy, scipy, pandas, statsmodels matplotlib mpld3 seaborn gatspy
 
 
 **Important:**  If you want to use pandashells without interactive visualizations
