@@ -103,25 +103,25 @@ Overview
   
 * Tool Descriptions
 
-Tool          |Dependency Group|Purpose
----           |---
-p.cdf         |full            |Plot emperical distribution function
-p.config      |standard library|Set default Pandashells configuration options
-p.crypt       |standard library|Encrypt/decrypt files using open-ssl
-p.df          |pandas          |Pandas dataframe manipulation of text files
-p.example_data|pandas          |Create sample csv files for training/testing
-p.facet_grid  |full            |Create faceted plots for data exploration
-p.format      |standard library|Render python string templates using input data
-p.hist        |full            |Plot histograms
-p.linspace    |pandas          |Generate a linearly spaced series of numbers
-p.lomb_scargle|full            |Generate Lomb-Scarge spectrogram of input time series
-p.merge       |pandas          |Merge two data files by specifying join keys
-p.parallel    |standard library|Read shell commands from stdin and run them in parallel
-p.plot        |full            |Create xy plot visualizations
-p.rand        |pandas          |Generate random numbers
-p.regplot     |full            |Quickly plot linear regression of data to a polynomial
-p.regress     |pandas          |Perform (multi-variate) linear regression with R-like patsy syntax
-p.sig_edit    |pandas          |Remove outliers using iterative sigma-editing
+Tool | Dependency Group | Purpose
+--- | --- | ---
+p.cdf | full | Plot emperical distribution function
+p.config | standard library | Set default Pandashells configuration options
+p.crypt | standard library | Encrypt/decrypt files using open-ssl
+p.df | pandas | Pandas dataframe manipulation of text files
+p.example_data |pandas| Create sample csv files for training/testing
+p.facet_grid | full | Create faceted plots for data exploration
+p.format | standard library |Render python string templates using input data
+p.hist | full |Plot histograms
+p.linspace | pandas | Generate a linearly spaced series of numbers
+p.lomb_scargle | full | Generate Lomb-Scarge spectrogram of input time series
+p.merge | pandas |Merge two data files by specifying join keys
+p.parallel | standard library | Read shell commands from stdin and run them in parallel
+p.plot | full | Create xy plot visualizations
+p.rand | pandas | Generate random numbers
+p.regplot | full | Quickly plot linear regression of data to a polynomial
+p.regress | pandas | Perform (multi-variate) linear regression with R-like patsy syntax
+p.sig_edit | pandas | Remove outliers using iterative sigma-editing
 
 
 DataFrame Manipulations
