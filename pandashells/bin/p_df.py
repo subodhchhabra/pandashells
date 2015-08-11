@@ -216,7 +216,7 @@ def main():  # pragma: no cover
     args = parser.parse_args()
 
     get_modules_and_shortcuts(args.statement)
-    from pandashells import io_lib
+    from pandashells.lib import io_lib
 
 
     # get the input dataframe
