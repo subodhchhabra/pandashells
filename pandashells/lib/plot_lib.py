@@ -4,8 +4,8 @@ import sys
 import re
 from pandashells.lib import module_checker_lib
 
-module_checker_lib.check_for_modules(
-    ['matplotlib', 'dateutil', 'mpld3', 'seaborn'])
+# module_checker_lib.check_for_modules(
+    #['matplotlib', 'dateutil', 'mpld3', 'seaborn'])
 
 
 from dateutil.parser import parse

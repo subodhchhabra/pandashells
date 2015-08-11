@@ -12,15 +12,15 @@ HEADER += "installing them.\n\n"
 CMD_DICT = {
     'dateutil': 'pip install dateutil',
     'gatspy': 'pip install gatspy',
-    'matplotlib': 'conda install matplotlib',
+    'matplotlib': 'pip install matplotlib',
     'mpld3': 'pip install mpld3',
-    'numpy': 'conda install numpy',
-    'pandas': 'conda install pandas',
-    'pylab': 'conda install matplotlib',
+    'numpy': 'pip install numpy',
+    'pandas': 'pip install pandas',
+    'pylab': 'pip install matplotlib',
     'requests': 'pip install requests',
-    'scipy': 'conda install scipy',
-    'seaborn': 'conda install seaborn',
-    'statsmodels': 'conda install statsmodels',
+    'scipy': 'pip install scipy',
+    'seaborn': 'pip install seaborn',
+    'statsmodels': 'pip install statsmodels',
 }
 
 
@@ -56,5 +56,10 @@ def check_for_modules(module_list):
             msg += '-' * 60 + '\n'
             msg += "Missing module '{}'. To install use: \n".format(module)
             msg += "    {}\n\n".format(CMD_DICT[module])
-            sys.stdout.write(msg + '\n')
-            raise
+    if msg:
+        sys.stdout.write(msg + '\n')
+        sys.exit(1)
+
+
+
+

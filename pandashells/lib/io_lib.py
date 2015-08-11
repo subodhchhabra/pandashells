@@ -5,7 +5,7 @@ import os
 import csv
 
 from pandashells.lib import module_checker_lib, config_lib
-module_checker_lib.check_for_modules(['pandas', 'numpy'])
+# module_checker_lib.check_for_modules(['pandas', 'numpy'])
 
 import numpy as np
 import pandas as pd
