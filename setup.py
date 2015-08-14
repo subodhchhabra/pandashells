@@ -37,9 +37,9 @@ setup(
         'Topic :: Scientific/Engineering',
     ],
     # If you add/remove a requirement, please also update full
-    extras_require = {
+    extras_require={
         'pandas': ['numpy', 'pandas', 'scipy', 'patsy', 'statsmodels', 'scikit-learn'],
-        'plotting': ['matplotlib', 'jinja2', 'mpld3', 'seaborn', 'supersmoother', 'astroML' ],
+        'plotting': ['matplotlib', 'jinja2', 'mpld3', 'seaborn', 'supersmoother', 'astroML'],
         'lomb_scargle': ['gatspy']
     },
     entry_points={

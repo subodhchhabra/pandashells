@@ -1,4 +1,6 @@
 #! /usr/bin/env python
+
+from collections import Counter
 import sys
 import importlib
 from pandashells.lib import config_lib
@@ -23,6 +25,19 @@ CMD_DICT = {
     'statsmodels': 'pip install statsmodels',
 }
 
+BACKEND_COUNTER = Counter()
+
+
+def set_backend():
+    if BACKEND_COUNTER['use_called'] == 0:
+        try:
+            import matplotlib
+            config = config_lib.get_config()
+            matplotlib.use(config['plot_backend'])
+            BACKEND_COUNTER.update({'use_called': 1})
+        except ImportError:
+            pass
+
 
 def check_for_modules(module_list):
     # make sure module_list only contains recognized modules
@@ -35,13 +50,7 @@ def check_for_modules(module_list):
 
     # try using configured backend ignoring errors so they'll be caught later
     if set(module_list).intersection({'matplotlib', 'pylab', 'seaborn'}):
-        CONFIG = config_lib.get_config()
-        try:
-            import matplotlib
-            if matplotlib.get_backend() != CONFIG['plot_backend']:
-                matplotlib.use(CONFIG['plot_backend'])
-        except ImportError:
-            pass
+        set_backend()
 
     # initialize an error message
     msg = ''
@@ -59,7 +68,3 @@ def check_for_modules(module_list):
     if msg:
         sys.stdout.write(msg + '\n')
         sys.exit(1)
-
-
-
-

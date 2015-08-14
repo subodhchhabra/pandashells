@@ -9,7 +9,6 @@ module_checker_lib.check_for_modules(['pandas', 'matplotlib'])
 from pandashells.lib import arg_lib, io_lib, plot_lib
 
 
-
 def main():
     msg = textwrap.dedent(
         """

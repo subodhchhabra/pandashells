@@ -5,10 +5,11 @@ import sys
 import argparse
 import textwrap
 
-from pandashells.lib import module_checker_lib, arg_lib, io_lib, plot_lib
+from pandashells.lib import module_checker_lib, arg_lib, io_lib
 
 # import required dependencies
 module_checker_lib.check_for_modules(['numpy', 'pandas', 'matplotlib'])
+from pandashells.lib import plot_lib
 
 import numpy as np
 import pandas as pd

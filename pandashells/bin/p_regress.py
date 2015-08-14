@@ -5,7 +5,7 @@ import sys
 import argparse
 import textwrap
 
-from pandashells.lib import module_checker_lib, arg_lib, io_lib, plot_lib
+from pandashells.lib import module_checker_lib, arg_lib, io_lib
 
 # import required dependencies
 module_checker_lib.check_for_modules([
@@ -16,6 +16,7 @@ module_checker_lib.check_for_modules([
     'numpy',
     'scipy'])
 
+from pandashells.lib import plot_lib
 import matplotlib as mpl
 import pylab as pl
 import seaborn as sns

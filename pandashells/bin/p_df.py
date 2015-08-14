@@ -9,7 +9,6 @@ import re  # noqa
 import sys  # noqa
 import datetime  # noqa
 
-#from pandashells.lib import module_checker_lib, arg_lib, io_lib
 from pandashells.lib import module_checker_lib
 
 
@@ -217,7 +216,6 @@ def main():  # pragma: no cover
 
     get_modules_and_shortcuts(args.statement)
     from pandashells.lib import io_lib
-
 
     # get the input dataframe
     df = io_lib.df_from_input(args)

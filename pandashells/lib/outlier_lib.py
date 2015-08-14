@@ -3,14 +3,8 @@
 # standard library imports
 from collections import Counter
 
-#from pandashells.lib import module_checker_lib
-
-# import required dependencies
-# module_checker_lib.check_for_modules(['pandas', 'numpy'])
-
 import pandas as pd
 import numpy as np
-
 
 
 # recursive edit a series
