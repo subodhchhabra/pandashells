@@ -4,13 +4,13 @@
 import argparse
 from importlib import import_module
 import textwrap
+import warnings
 import os  # noqa
 import re  # noqa
 import sys  # noqa
 import datetime  # noqa
-import pandas as pd
 
-from pandashells.lib import module_checker_lib, arg_lib, io_lib
+from pandashells.lib import module_checker_lib
 
 
 def needs_plots(command_list):
@@ -28,6 +28,7 @@ def needs_plots(command_list):
 
 
 def get_modules_and_shortcuts(command_list):
+    warnings.filterwarnings('ignore')
     names_shortcuts = [
         ('datetime', 'datetime'),
         ('numpy', 'np'),
@@ -48,6 +49,7 @@ def get_modules_and_shortcuts(command_list):
 
     # make sure required modules are installed
     module_checker_lib.check_for_modules([m for (m, s) in out])
+    warnings.resetwarnings()
 
     return out
 
@@ -56,7 +58,6 @@ def execute(cmd, scope_entries=None, retval_name=None):
     scope = scope_entries if scope_entries else {}
     from dateutil.parser import parse
     scope['parse'] = parse
-    scope['pd'] = pd
     for (module, shortcut) in get_modules_and_shortcuts(sys.argv):
         scope[shortcut] = import_module(module)
     exec(cmd, scope)
@@ -76,6 +77,7 @@ def exec_plot_command(args, cmd, df):  # pragma: no cover
 
 
 def framify(cmd, df):
+    import pandas as pd
     if isinstance(df, pd.DataFrame):
         return df
     else:
@@ -178,6 +180,13 @@ def main():  # pragma: no cover
             * Print a csv file in nice tabular format
                 p.example_data -d tips | p.df -o table | head
 
+            * Print a csv file to json
+                p.example_data -d tips | head | p.df -o json
+
+            * Transform csv to json then to table
+                p.example_data -d tips | head | p.df -o json \\
+                | p.df -i json -o table
+
             * Select by row
                 p.example_data -d tips \\
                 | p.df 'df[df.sex=="Female"]' 'df[df.smoker=="Yes"]' -o table
@@ -202,10 +211,11 @@ def main():  # pragma: no cover
         -----------------------------------------------------------------------
         """
     )
+    from pandashells.lib import arg_lib
 
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawDescriptionHelpFormatter, description=msg)
-    arg_lib.add_args(parser, 'io_in', 'io_out', 'decorating', 'example')
+    arg_lib.add_args(parser, 'io_in', 'io_out', 'decorating')
     msg = (
         '(MUST come before any options) '
         '[statement ...] Statement(s) to execute. '
@@ -213,6 +223,9 @@ def main():  # pragma: no cover
     parser.add_argument(
         "statement", help=msg, nargs="*")
     args = parser.parse_args()
+
+    get_modules_and_shortcuts(args.statement)
+    from pandashells.lib import io_lib
 
     # get the input dataframe
     df = io_lib.df_from_input(args)

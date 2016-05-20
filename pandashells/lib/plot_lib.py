@@ -1,13 +1,9 @@
 #! /usr/bin/env python
 
-import sys
 import re
-from pandashells.lib import module_checker_lib
-
-module_checker_lib.check_for_modules(
-    ['matplotlib', 'dateutil', 'mpld3', 'seaborn'])
-
-
+import sys
+import warnings
+warnings.filterwarnings("ignore")
 from dateutil.parser import parse
 import matplotlib as mpl
 import pylab as pl
@@ -35,6 +31,7 @@ def show(args):
 
 def set_plot_styling(args):
     # set up seaborn context
+    warnings.filterwarnings("ignore")
     sns.set(context=args.plot_context[0],
             style=args.plot_theme[0],
             palette=args.plot_palette[0])

@@ -4,13 +4,16 @@
 import argparse
 import sys  # NOQA just use this for patching in tests
 import textwrap
+import warnings
+warnings.filterwarnings('ignore')
 
-from pandashells.lib import module_checker_lib, arg_lib, io_lib, plot_lib
+from pandashells.lib import module_checker_lib, arg_lib
 
 # import required dependencies
 module_checker_lib.check_for_modules(
     ['pandas', 'numpy', 'matplotlib', 'seaborn'])
-
+from pandashells.lib import plot_lib
+from pandashells.lib import io_lib
 import pylab as pl  # noqa
 import seaborn as sns
 
@@ -112,6 +115,7 @@ def main():
     msg = "Save the figure to this file"
     parser.add_argument('--savefig', nargs=1, type=str, help=msg)
 
+    warnings.filterwarnings('ignore')
     # parse arguments
     args = parser.parse_args()
 

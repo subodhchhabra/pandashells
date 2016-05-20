@@ -9,7 +9,7 @@ from unittest import TestCase
 import pandas as pd
 try:
     from StringIO import StringIO
-except ImportError:
+except ImportError:  # pragma nocover
     from io import StringIO
 
 from pandashells.bin.p_df import (
@@ -120,8 +120,12 @@ class ProcessCommandTests(TestCase):
         args = MagicMock()
         cmd = 'df.a.value_counts()'
         df = process_command(args, cmd, self.df)
+
+        # this line is needed so tests pass for different pandas version
+        df = df.rename(columns={0: 'a'})
+
         self.assertEqual(set(df.index), {1, 2, 3, 4})
-        self.assertEqual(set(df[0]), {1})
+        self.assertEqual(set(df['a']), {1})
 
 
 class IntegrationTests(TestCase):

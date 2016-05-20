@@ -3,10 +3,11 @@
 # standard library imports
 import argparse
 import textwrap
+import warnings
 
 import sys  # NOQA  need this for mock testig
 
-from pandashells.lib import module_checker_lib, arg_lib, io_lib, plot_lib
+from pandashells.lib import module_checker_lib
 
 # import required dependencies
 module_checker_lib.check_for_modules([
@@ -15,10 +16,14 @@ module_checker_lib.check_for_modules([
     'matplotlib',
     'statsmodels'
 ])
+from pandashells.lib import arg_lib, io_lib, plot_lib
 
 import pandas as pd
 import numpy as np
+
+warnings.filterwarnings('ignore')
 import pylab as pl
+warnings.resetwarnings()
 from statsmodels.distributions.empirical_distribution import ECDF
 
 
